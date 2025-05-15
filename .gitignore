@@ -1,0 +1,15 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependências
+node_modules
+
+# Cache npm
+.npm
+
+# Arquivos do sistema
+.DS_Store
+.idea
+.vscode
