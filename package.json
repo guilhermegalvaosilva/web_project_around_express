@@ -1,25 +1,28 @@
 {
-  "name": "web_project_around_express-1",
+  "name": "web_project_around_express",
   "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/guilhermegalvaosilva/web_project_around_express#readme",
-  "bugs": {
-    "url": "https://github.com/guilhermegalvaosilva/web_project_around_express/issues"
+  "description": "Projeto backend do site EUA Afora usando Node.js e Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Guilherme Galvão",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guilhermegalvaosilva/web_project_around_express.git"
   },
-  "license": "ISC",
-  "author": "Galvao",
   "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "lint": "npx eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+  "bugs": {
+    "url": "https://github.com/guilhermegalvaosilva/web_project_around_express/issues"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+  "homepage": "https://github.com/guilhermegalvaosilva/web_project_around_express#readme"
 }
