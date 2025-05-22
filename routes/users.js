@@ -4,7 +4,7 @@ const path = require("path");
 
 const router = express.Router();
 
-const usersPath = path.join(__dirname, "..", "data", "users.json");
+const usersPath = path.join(__dirname, "..", "data", "user.json");
 
 // Rota para listar todos os usuários
 router.get("/", (req, res) => {
