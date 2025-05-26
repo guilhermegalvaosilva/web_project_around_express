@@ -1,17 +1,27 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
-
 const router = express.Router();
+const {
+  getCards,
+  createCard,
+  deleteCard,
+  likeCard,
+  dislikeCard,
+} = require("../controllers/cards");
 
-const cardsPath = path.join(__dirname, "..", "data", "cards.json");
+router.get("/", getCards);
+router.post("/", createCard);
+router.delete("/:cardId", deleteCard);
 
-// Rota para listar todos os cards
-router.get("/", (req, res) => {
-  fs.readFile(cardsPath, "utf8", (err, data) => {
-    if (err) return res.status(500).send({ message: "Erro ao carregar cards" });
-    return res.send(JSON.parse(data));
-  });
-});
+// 👉 Adicionado console.log() para verificar se a rota está sendo chamada
+router.put(
+  "/:cardId/likes",
+  (req, res, next) => {
+    console.log("➡️ PUT /cards/:cardId/likes chegou!");
+    next();
+  },
+  likeCard
+);
+
+router.delete("/:cardId/likes", dislikeCard);
 
 module.exports = router;
